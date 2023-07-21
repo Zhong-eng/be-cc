@@ -2,7 +2,7 @@
 import openai
 
 # configure openai to your account 
-openai.api_key = "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"
+openai.api_key = "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"
 
 def summarize(text):
 	

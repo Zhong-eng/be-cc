@@ -1,6 +1,10 @@
 # import library
 import openai
 import os 
+from dotenv import load_dotenv, find_dotenv
+
+load_dotenv(find_dotenv())
+
 # configure openai to your account 
 openai.api_key = os.environ.get('api_key')
 

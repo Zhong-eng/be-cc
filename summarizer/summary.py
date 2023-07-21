@@ -1,8 +1,8 @@
 # import library
 import openai
-
+import os 
 # configure openai to your account 
-openai.api_key = "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"
+openai.api_key = os.environ.get('api_key')
 
 def summarize(text):
 	

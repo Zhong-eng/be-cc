@@ -13,6 +13,10 @@ https://docs.djangoproject.com/en/4.2/ref/settings/
 from pathlib import Path
 import os
 
+from dotenv import load_dotenv, find_dotenv
+
+load_dotenv(find_dotenv())
+
 CORS_ORIGIN_ALLOW_ALL = False
 
 CORS_ORIGIN_WHITELIST = [
@@ -84,7 +88,7 @@ WSGI_APPLICATION = 'my_project.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
-
+print(os.environ.get('PGDATABASE'))
 if DEBUG:
     DATABASES = {
         'default': {
